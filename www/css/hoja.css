@@ -1,0 +1,24 @@
+.fondo{
+	width: 100%;
+	height: 100%;
+
+}
+.centrar{
+	width: 280px;
+	height: 181px;
+	position: relative;
+	top: 28%;
+	left: 4%;
+	right: 0;
+	bottom: 0;
+
+}
+.centra{
+	width: 231px;
+	height: 36px;
+	position: relative;
+	top: 21px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}

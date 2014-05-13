@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+              <!-- Hojas de estilo -->
+            <!-- direccion de -->
+            <link rel="stylesheet" href="css/lungo.css">
+            <link rel="stylesheet" href="css/lungo.icon.css">
+            <link rel="stylesheet" href="css/lungo.theme.css">
+            <link rel="stylesheet" type="text/css" href="css/index.css">
+            <link rel="stylesheet" href="css/hoja.css">
+
+        <!-- Script -->
+            <script src="js/quo.js"></script>
+            <script src="js/lungo.js"></script>
+        <title></title>
+    </head>
+    <body>
+            <section id="main" data-transition="slide">
+                <header data-title="menu">
+                    <nav>
+                        <a href="#"data-view-menu="options"data-icon="menu"></a>
+                    </nav>
+                </header>   
+                <nav id="options" data-control="menu">
+                    <a href="#" id="foto" data-view-section="seccion1" data-icon="menu">SESIONES</a>
+                    <a href="#" id="tarjeta" data-transition-section="seccion2" data-icon="menu">TARJETAS</a>
+                    <a href="#" id="logo" data-transition-section="seccion3" data-icon="menu">LOGOS</a>
+                    <a href="#" id="publi" data-transition-section="seccion4" data-icon="menu">PUBLICIDAD</a>
+                    
+                </nav>  
+                <article class="activo">
+             
+         <img id="ima" src="./img/meje.png" class="fondo" />
+               
+           </article>
+            </section>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+            Lungo.init({
+            name: 'hello-world',
+           resources:['seccion1.html','seccion2.html','seccion3.html','seccion4.html']
+        });
+             // codigo para manejar el click
+                Lungo.dom('#foto').on('click',function(event){
+                Lungo.Router.section("sec1");
+                });
+            
+                Lungo.dom('#tarjeta').on('click',function(event){
+                Lungo.Router.section("sec2");
+                });
+            
+                Lungo.dom('#logo').on('click',function(event){
+                Lungo.Router.section("sec3");
+                });
+            
+                Lungo.dom('#publi').on('click',function(event){
+                Lungo.Router.section("sec4");
+                });
+            
+                Lungo.dom('#amy').on('click',function(event){
+                Lungo.Router.section("sec5");
+        });  
+                
+       </script>
+    </body>
+</html>
